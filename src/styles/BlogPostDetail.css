@@ -1,0 +1,163 @@
+.blog-post-detail {
+  padding: 0;
+  color: white;
+  max-width: 100%;
+  width: 100%;
+}
+
+.back-link {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 2rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.back-link:hover {
+  color: #f0f0f0;
+}
+
+.post {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 2rem;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.post h1 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: var(--fs-xl);
+  line-height: 1.3;
+}
+
+.post-meta {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.post-date {
+  color: #aaa;
+  font-size: var(--fs-xs);
+}
+
+.featured-image {
+  margin-bottom: 2rem;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.featured-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.image-credit {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: var(--fs-xs);
+}
+
+.post-content {
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.post-content p {
+  margin-bottom: 1.5rem;
+}
+
+.post-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin: 1.5rem 0;
+}
+
+.post-content a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.post-content a:hover {
+  text-decoration: none;
+}
+
+.post-content h2, .post-content h3, .post-content h4 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.post-content ul, .post-content ol {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.post-content li {
+  margin-bottom: 0.5rem;
+}
+
+.post-footer {
+  text-align: right;
+  color: #aaa;
+  font-size: var(--fs-xs);
+  margin-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1rem;
+}
+
+.loading, .error, .not-found {
+  padding: 2rem;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  margin: 1rem 0;
+}
+
+.error {
+  color: #ff6b6b;
+}
+
+/* Responsive styles */
+@media (max-width: 900px) {
+  .blog-post-detail {
+    padding: 0;
+    width: 100%;
+  }
+  
+  .post {
+    padding: 1rem;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    border-radius: 0;
+  }
+  
+  .post h1 {
+    font-size: var(--fs-lg);
+  }
+  
+  .post-content {
+    line-height: 1.6;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  
+  .post-content img {
+    width: 100%;
+  }
+} 

@@ -1,0 +1,33 @@
+/* Image credit styling for hover/click functionality */
+.image-container {
+  position: relative;
+}
+
+/* Override the existing image-credit styles to make them hidden by default */
+.image-credit {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: var(--fs-xs);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+
+/* Show credits on hover */
+.image-container:hover .image-credit {
+  opacity: 1;
+}
+
+/* For touch devices - active state when clicked/tapped */
+.image-container:active .image-credit {
+  opacity: 1;
+}
+
+/* Optional: Class to keep the credit visible (can be toggled with JavaScript) */
+.image-credit.visible {
+  opacity: 1;
+} 

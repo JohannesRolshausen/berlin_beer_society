@@ -1,0 +1,127 @@
+.termin-detail-page {
+  padding: 0;
+  color: white;
+  max-width: 100%;
+}
+
+.back-link {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 2rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.back-link:hover {
+  color: #f0f0f0;
+}
+
+.termin {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.termin-header {
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.termin-date-time {
+  margin-bottom: 1rem;
+}
+
+.termin-date {
+  font-size: var(--fs-md);
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.termin-time {
+  font-size: var(--fs-sm);
+  color: #cccccc;
+}
+
+.termin-header h1 {
+  margin: 0;
+  font-size: var(--fs-xl);
+  line-height: 1.3;
+}
+
+.featured-image {
+  max-width: 100%;
+}
+
+.featured-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.termin-content {
+  padding: 2rem;
+  line-height: 1.7;
+}
+
+.termin-content p {
+  margin-bottom: 1.5rem;
+}
+
+.termin-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin: 1.5rem 0;
+}
+
+.termin-content a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.termin-content a:hover {
+  text-decoration: none;
+}
+
+.termin-content h2, .termin-content h3, .termin-content h4 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.termin-content ul, .termin-content ol {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.termin-content li {
+  margin-bottom: 0.5rem;
+}
+
+.loading, .error, .not-found {
+  padding: 2rem;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  margin: 1rem 0;
+}
+
+.error {
+  color: #ff6b6b;
+}
+
+/* Responsive styles */
+@media (max-width: 900px) {
+  .termin-header {
+    padding: 1.5rem;
+  }
+  
+  .termin-content {
+    padding: 1.5rem;
+  }
+  
+  .termin-header h1 {
+    font-size: var(--fs-lg);
+  }
+} 

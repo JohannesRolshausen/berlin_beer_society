@@ -1,8 +1,7 @@
 #root {
-  max-width: 1280px;
+  max-width: 1480px;
   margin: 0 auto;
   padding: 2rem;
-  text-align: center;
 }
 
 .logo {
@@ -12,10 +11,10 @@
   transition: filter 300ms;
 }
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  filter: drop-shadow(0 0 2em #000000aa);
 }
 .logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  filter: drop-shadow(0 0 2em #000000aa);
 }
 
 @keyframes logo-spin {
@@ -39,4 +38,162 @@
 
 .read-the-docs {
   color: #888;
+}
+
+/* Base styles */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #2f5448; /* Dark green background as seen in design */
+  color: white;
+  padding: 0;
+  margin: 0;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Header and layout styles */
+header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex: 1;
+}
+
+.sidebar {
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1rem;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1rem;
+}
+
+.logo-container {
+  margin-bottom: 2rem;
+}
+
+.logo {
+  width: 220px;
+  height: auto;
+  background-color: #000; /* Black background for logo as in design */
+  padding: 1rem;
+}
+
+/* Navigation styles */
+.navigation {
+  margin-top: 1rem;
+}
+
+.navigation ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.navigation li {
+  text-align: left;
+}
+
+.navigation a {
+  color: white;
+  text-decoration: none;
+  font-size: var(--fs-md);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navigation a:hover {
+  color: #f0f0f0;
+  text-decoration: underline;
+}
+
+/* Main content styles */
+.main-image-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.main-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.image-credit {
+  margin-top: 0.5rem;
+  text-align: right;
+  align-self: flex-end;
+  font-size: var(--fs-xs);
+}
+
+/* Footer styles */
+footer {
+  margin-top: auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.impressum-link {
+  color: white;
+  text-decoration: none;
+  font-size: var(--fs-sm);
+}
+
+.impressum-link:hover {
+  text-decoration: underline;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+
+  #root {
+    padding: 0rem;
+  }
+  
+  header {
+    flex-direction: column;
+  }
+  
+  .sidebar {
+    width: 100%;
+    max-width: 40%;
+    margin: auto;
+    padding: 0rem;
+    align-items: center;
+  }
+  
+  .navigation ul {
+    align-items: center;
+  }
+  
+  .navigation li {
+    text-align: center;
+  }
+  
+  .main-content {
+    padding: 1rem;
+  }
+  
+  .logo-container {
+    align-self: center;
+    margin-bottom: 0rem;
+  }
 }

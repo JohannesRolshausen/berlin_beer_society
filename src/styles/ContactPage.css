@@ -1,0 +1,39 @@
+.placeholder-page {
+    padding: 0;
+    color: white;
+    width: 100%;
+  }
+  
+  .placeholder-page h1 {
+    margin-bottom: 2rem;
+    font-size: var(--fs-xl);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 1rem;
+  }
+  
+  .placeholder-content {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 2rem;
+  }
+  
+  .placeholder-content p {
+    font-size: var(--fs-md);
+    line-height: 1.6;
+  }
+
+  .contact-info {
+    margin-top: 2rem;
+    text-decoration: underline;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 900px) {
+    .placeholder-content {
+      padding: 1.5rem;
+    }
+    
+    .placeholder-page h1 {
+      font-size: var(--fs-lg);
+    }
+  } 
