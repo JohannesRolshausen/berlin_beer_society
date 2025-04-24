@@ -6,7 +6,6 @@
 
 .logo {
   height: 6em;
-  padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
 }
@@ -45,7 +44,7 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #739E8A; /* Dark green background as seen in design */
+  background-color: #4F6F64; /* Dark green background as seen in design */
   color: white;
   padding: 0;
   margin: 0;
@@ -87,8 +86,6 @@ header {
 
 .logo {
   height: auto;
-  background-color: #000; /* Black background for logo as in design */
-  padding: 1rem;
 }
 
 /* Navigation styles */

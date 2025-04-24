@@ -29,7 +29,7 @@ function Layout() {
           <div className="sidebar">
             <div className="logo-container">
               <Link to="/">
-                <img src="/logo.png" alt="Berlin Beer Society Logo" className="logo" />
+                <img src="/logo.jpg" alt="Berlin Beer Society Logo" className="logo" />
               </Link>
             </div>
             
