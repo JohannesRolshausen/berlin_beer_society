@@ -1,5 +1,5 @@
 #root {
-  max-width: 1480px;
+  max-width: 1500px;
   margin: 0 auto;
   padding: 2rem;
 }
@@ -45,7 +45,7 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #2f5448; /* Dark green background as seen in design */
+  background-color: #739E8A; /* Dark green background as seen in design */
   color: white;
   padding: 0;
   margin: 0;
@@ -70,7 +70,8 @@ header {
   width: 280px;
   display: flex;
   flex-direction: column;
-  padding: 2rem 1rem;
+  padding: 2rem 0.5rem;
+  margin-right: 0.3rem;
 }
 
 .main-content {
@@ -85,7 +86,6 @@ header {
 }
 
 .logo {
-  width: 220px;
   height: auto;
   background-color: #000; /* Black background for logo as in design */
   padding: 1rem;
@@ -112,7 +112,7 @@ header {
 .navigation a {
   color: white;
   text-decoration: none;
-  font-size: var(--fs-md);
+  font-size: var(--fs-xl);
   font-weight: 500;
   transition: color 0.3s ease;
 }

@@ -110,7 +110,7 @@
   }
   
   .navigation.mobile-nav a {
-    font-size: var(--fs-lg);
+    font-size: var(--fs-xl);
     width: 100%;
     display: block;
     padding: 0.5rem;

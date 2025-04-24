@@ -21,8 +21,8 @@ function AboutPage() {
         <p>
         Wir, das sind:
         </p>
-        <p>Katharina Rolshausen, geboren 1973 in Vorarlberg, Diplom-Pädagogin, Journalistin, Autorin, Kaffee-, Käse- und Biersommelière.</p>
-        <p>Martin Rolshausen, geboren 1967 im Saarland, Einzelhandelskaufmann, Journalist, Autor, Kaffee- und Biersommelier.</p>
+        <p><b>Katharina Rolshausen</b>, geb. 1973 in Vorarlberg, Diplom-Pädagogin, Journalistin, Autorin, Kaffee-, Käse- und Biersommelière.</p>
+        <p><b>Martin Rolshausen</b>, geb. 1967 im Saarland, Einzelhandelskaufmann, Journalist, Autor, Kaffee- und Biersommelier.</p>
       </div>
     </div>
   );

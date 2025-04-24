@@ -23,8 +23,9 @@ function TastingsPage() {
           <li>Für Fortgeschrittene: Bier & Politik, Dunkle Begierde, Fassgelagertes Bier</li>
         </ul>
         </p>
+        <br></br>
         <p><b>Unsere Angebote für die Gastronomie:</b></p>
-        <p style={{ marginLeft: '1rem' }}>Mitarbeiterschulung, individuelle Bierkarten, Veranstaltungen, Konzeptentwicklung rund ums Bier</p>
+        <p>Mitarbeiterschulung, individuelle Bierkarten, Veranstaltungen, Konzeptentwicklung rund ums Bier</p>
       </div>
     </div>
   );

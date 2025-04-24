@@ -37,3 +37,7 @@
       font-size: var(--fs-lg);
     }
   } 
+
+  .standard-email-link {
+    font-size: var(--fs-md) !important;
+  }
