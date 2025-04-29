@@ -201,31 +201,7 @@ function TerminePage() {
     }
   }, [posts]);
 
-  // Debug: Log the sorted order
-  useEffect(() => {
-    if (sortedPosts.length > 0) {
-      sortedPosts.forEach(post => {
-        const details = parseEventDetails(post);
-      });
-    }
-  }, [sortedPosts]);
 
-  const formatDate = (dateString: string) => {
-    const date = new Date(dateString);
-    return date.toLocaleDateString('de-DE', {
-      day: '2-digit',
-      month: '2-digit',
-      year: 'numeric'
-    });
-  };
-
-  const formatTime = (dateString: string) => {
-    const date = new Date(dateString);
-    return date.toLocaleTimeString('de-DE', {
-      hour: '2-digit',
-      minute: '2-digit'
-    });
-  };
 
   return (
     <div className="termine-page">

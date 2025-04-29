@@ -53,6 +53,75 @@ function BlogPostDetail() {
   const [authorName, setAuthorName] = useState<string>('');
   const [photographer, setPhotographer] = useState<string>('');
 
+  // Helper function to strip HTML tags for meta description
+  const stripHtml = (html: string) => {
+    return html.replace(/<\/?[^>]+(>|$)/g, "").trim();
+  };
+
+  // Set meta tags when post is loaded
+  useEffect(() => {
+    if (post) {
+      const cleanTitle = stripHtml(post.title.rendered);
+      const description = stripHtml(post.content.rendered).substring(0, 160) + '...';
+      
+      // Set page title
+      document.title = `${cleanTitle} | Berlin Beer Society`;
+      
+      // Update meta tags
+      const updateMeta = (name: string, content: string) => {
+        let meta = document.querySelector(`meta[name="${name}"]`) || 
+                   document.querySelector(`meta[property="${name}"]`);
+        
+        if (!meta) {
+          meta = document.createElement('meta');
+          if (name.startsWith('og:') || name.startsWith('twitter:')) {
+            meta.setAttribute('property', name);
+          } else {
+            meta.setAttribute('name', name);
+          }
+          document.head.appendChild(meta);
+        }
+        
+        meta.setAttribute('content', content);
+      };
+      
+      // Set description
+      updateMeta('description', description);
+      
+      // Open Graph tags
+      updateMeta('og:title', cleanTitle);
+      updateMeta('og:description', description);
+      updateMeta('og:url', window.location.href);
+      updateMeta('og:type', 'article');
+      
+      // Image
+      if (post.jetpack_featured_media_url) {
+        updateMeta('og:image', post.jetpack_featured_media_url);
+      }
+      
+      // Twitter Card tags
+      updateMeta('twitter:card', 'summary_large_image');
+      updateMeta('twitter:title', cleanTitle);
+      updateMeta('twitter:description', description);
+      
+      if (post.jetpack_featured_media_url) {
+        updateMeta('twitter:image', post.jetpack_featured_media_url);
+      }
+      
+      // Debug: Log meta tags to console
+      console.log('Meta tags updated:', {
+        title: document.title,
+        description: document.querySelector('meta[name="description"]')?.getAttribute('content'),
+        ogImage: document.querySelector('meta[property="og:image"]')?.getAttribute('content'),
+        twitterImage: document.querySelector('meta[property="twitter:image"]')?.getAttribute('content')
+      });
+      
+      return () => {
+        document.title = 'Berlin Beer Society'; // Reset title when component unmounts
+      };
+    }
+  }, [post]);
+
   useEffect(() => {
     const fetchPost = async () => {
       if (!id) return;
@@ -146,20 +215,6 @@ function BlogPostDetail() {
             const author = data._embedded.author[0].name;
             setAuthorName(author);
           } 
-          // Methode 3: Versuch eines separaten API-Aufrufs (auch Auth-Problem)
-          else if (data.author) {
-            try {
-              const authorResponse = await fetch(`https://public-api.wordpress.com/wp/v2/sites/beersociety.berlin/users/${data.author}`);
-              if (authorResponse.ok) {
-                const authorData = await authorResponse.json();
-                if (authorData.name) {
-                  setAuthorName(authorData.name);
-                }
-              }
-            } catch (error) {
-              console.error("Fehler beim Abrufen des Autors:", error);
-            }
-          }
         }
 
       } catch (err) {
